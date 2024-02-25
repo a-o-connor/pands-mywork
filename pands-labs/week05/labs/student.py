@@ -3,15 +3,21 @@
 # The number of course she has could change.
 
 student = {
-    "Student": "Mary",
+    "Name": "Mary",
     "Modules":[
         {
-        "Programming":45,
+        "Course":"Programming",
+        "Grade":45,
     },
     {
-        "History": 99
+        "Course":"History",
+        "Grade": 99
     } 
     ]
 }
 
-print(student["Modules"][0:len(student["Modules"])])
+
+print("{name} got a grade of {grade} in their {course} course"
+      .format(name = student["Name"], 
+              course = student["Modules"][0]["Course"], 
+              grade = student["Modules"][0]["Grade"]))
